@@ -7,5 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Bitch Lasagna';
-  name = 'Nouraiz'
+  name:string;
+
+  constructor () {
+    this.setName('Nouraiz')
+  }
+
+  setName = (newName:string) => {
+      this.name = newName;
+      console.log('name updated', this.name);
+  }
+
 }
