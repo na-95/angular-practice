@@ -1,7 +1,6 @@
-<ul class="list-group mx-4">
-    <li class="list-group-item list-group-item-primary" *ngFor="let todo of todos">
-        <span>{{todo.id}}</span>
-        <span>{{todo.title}}</span>
-        <span>{{todo.completed}}</span>
-    </li>
+<app-add-todo (addTodo)="addTodo($event)"></app-add-todo>
+<ul class="list-group">
+    <app-todo-item (deleteTodo)="deleteTodo($event)"
+                   *ngFor="let todo of todos"
+                   [todo]="todo"></app-todo-item>
 </ul>

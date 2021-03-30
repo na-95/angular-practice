@@ -304,9 +304,11 @@
   }
 </style> -->
 
-<div class="content" role="main">
+<div class="content container"
+     role="main">
   <div>
-    <app-todos></app-todos>
+    <app-header></app-header>
+    <router-outlet></router-outlet>
   </div>
 </div>
 
@@ -317,5 +319,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>
