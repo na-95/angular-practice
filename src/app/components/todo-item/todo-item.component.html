@@ -1,11 +1,11 @@
 <li class="list-group-item list-group-item d-flex justify-content-between align-items-center">
       <!-- <span class="mx-2">{{todo.id}}</span> -->
-      <span [ngClass]="(todo.completed==true)?'is-complete':''"
-            class="mx-2">{{todo.title}}</span>
-      <span class="flex-grow-1"></span>
       <input type="checkbox"
              (change)="onToggle(todo)"
              [attr.checked]="todo.completed ? 'checked' : null" />
+      <span [ngClass]="(todo.completed==true)?'is-complete':''"
+            class="mx-2">{{todo.title}}</span>
+      <span class="flex-grow-1"></span>
       <button (click)="deleteTodo.emit(todo)"
-              class="mx-2 btn btn-sm btn-danger">X</button>
+              class="mx-2 btn btn-sm btn-danger">Remove</button>
 </li>
