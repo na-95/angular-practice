@@ -8,6 +8,7 @@ import { Todo } from 'src/app/models/todo';
 })
 export class AddTodoComponent implements OnInit {
 
+  // @Input('ngModel') model: any
   @Output() addTodo = new EventEmitter();
 
   title: string;
@@ -15,6 +16,10 @@ export class AddTodoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  fuark = (event) => {
+    console.log(event)
   }
 
   submitTodo = () => {

@@ -1,9 +1,11 @@
 <form (ngSubmit)="submitTodo()"
       class="d-flex mb-2">
-       <input type="text"
+       <input #fuk
+              type="text"
               name="title"
               class="mr-2 flex-grow-1"
-              [(ngModel)]="title" />
+              [(ngModel)]="title"
+              (ngModelChange)="fuark(fuk.value)" />
        <button type="submit"
                class="btn btn-success">Add</button>
 </form>
