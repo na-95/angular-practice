@@ -9,6 +9,9 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { AboutComponent } from './components/about/about.component';
+import { TestComponent } from './components/test/test.component';
+import { ChildOneComponent } from './components/child-one/child-one.component';
+import { ChildTwoComponent } from './components/child-two/child-two.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { AboutComponent } from './components/about/about.component';
     TodoItemComponent,
     HeaderComponent,
     AddTodoComponent,
-    AboutComponent
+    AboutComponent,
+    TestComponent,
+    ChildOneComponent,
+    ChildTwoComponent,
   ],
   imports: [
     BrowserModule,

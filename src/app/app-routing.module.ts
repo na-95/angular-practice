@@ -4,6 +4,7 @@ import { TodosComponent } from './components/todos/todos.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { AboutComponent } from './components/about/about.component';
+import { TestComponent } from './components/test/test.component';
 
 
 const routes: Routes = [{
@@ -12,6 +13,9 @@ const routes: Routes = [{
 }, {
   path: 'about',
   component: AboutComponent
+}, {
+  path: 'test',
+  component: TestComponent
 }];
 
 @NgModule({

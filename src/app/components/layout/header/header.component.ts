@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestServiceService } from 'src/app/services/test-service.service';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +10,13 @@ export class HeaderComponent implements OnInit {
 
   headerContent: string;
 
-  constructor() { }
+  constructor(public testService: TestServiceService) { }
 
   ngOnInit(): void {
-    this.headerContent = `Nouraiz's Todo App (in Angular!)`
+    this.testService.sharedProp.subscribe(
+      h => {
+        this.headerContent = h;
+      }
+    );
   }
-
 }
