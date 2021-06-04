@@ -12,6 +12,8 @@ import { AboutComponent } from './components/about/about.component';
 import { TestComponent } from './components/test/test.component';
 import { ChildOneComponent } from './components/child-one/child-one.component';
 import { ChildTwoComponent } from './components/child-two/child-two.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { TwoWayBindingChildComponent } from './components/two-way-binding-child/two-way-binding-child.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { ChildTwoComponent } from './components/child-two/child-two.component';
     TestComponent,
     ChildOneComponent,
     ChildTwoComponent,
+    TwoWayBindingComponent,
+    TwoWayBindingChildComponent,
   ],
   imports: [
     BrowserModule,
