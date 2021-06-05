@@ -15,19 +15,10 @@ export class TwoWayBindingComponent implements OnInit {
 
   }
 
-  triggerPropUpdate = () => {
-    // setTimeout(() => {
-    // this.zone.run(() => {
-    this.parentProp = 10;
-    // }
-    // )
-    // this.setParentProp(10);
-    // this.cdr.detectChanges()
-    // }, 2000)
+  triggerPropUpdate = (emittedValue) => {
+    
+    this.parentProp = emittedValue;
+    
   }
-
-  // set setParentProp(newVal) {
-  //   this.parentProp = newVal;
-  // }
 
 }
