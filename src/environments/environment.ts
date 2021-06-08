@@ -8,7 +8,7 @@ export const environment = {
   madarchod2: true
 };
 
-
+const buahahah = 'asdasdas';
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
