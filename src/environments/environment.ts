@@ -5,8 +5,7 @@
 export const environment = {
   production: false,
   madarchod: true,
-
-  wohooo: true
+  madarchod2: true
 };
 
 
