@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   showChildTwo: boolean = false;
+  leMessage: string = 'fuck';
+
   constructor() { }
 
   ngOnInit(): void {
