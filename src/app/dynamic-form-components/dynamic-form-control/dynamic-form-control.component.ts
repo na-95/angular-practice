@@ -14,4 +14,5 @@ export class DynamicFormControlComponent {
   @Input() control!: FormControlBase<string>;
   @Input() form!: FormGroup;
   get isValid() { return this.form.controls[this.control.key].valid; }
+  get isTouched() { return this.form.controls[this.control.key].touched; }
 }

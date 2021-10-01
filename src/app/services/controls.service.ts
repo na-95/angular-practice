@@ -29,6 +29,7 @@ export class ControlsService {
 
       new TextboxControl({
         key: 'firstName',
+        placeholder: 'First Name',
         label: 'First name',
         value: 'Bombasto',
         required: true,
@@ -36,9 +37,18 @@ export class ControlsService {
       }),
 
       new TextboxControl({
+        key: 'secondName',
+        placeholder: 'Second Name',
+        label: 'Second name',
+        order: 1
+      }),
+
+      new TextboxControl({
         key: 'emailAddress',
+        placeholder: 'Email',
         label: 'Email',
         type: 'email',
+        required: true,
         order: 2
       })
     ];

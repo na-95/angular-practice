@@ -3,7 +3,8 @@
 
     <div [ngSwitch]="control.controlType">
 
-        <input *ngSwitchCase="'textbox'" [formControlName]="control.key" [id]="control.key" [type]="control.type">
+        <input *ngSwitchCase="'textbox'" [placeholder]="control.placeholder" [formControlName]="control.key"
+            [id]="control.key" [type]="control.type">
 
         <select [id]="control.key" *ngSwitchCase="'dropdown'" [formControlName]="control.key">
             <option *ngFor="let opt of control.options" [value]="opt.key">{{opt.value}}</option>
@@ -11,5 +12,5 @@
 
     </div>
 
-    <div class="errorMessage" *ngIf="!isValid">{{control.label}} is required</div>
+    <div class="errorMessage" *ngIf="isTouched && !isValid">{{control.label}} is required</div>
 </div>
