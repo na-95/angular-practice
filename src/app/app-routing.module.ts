@@ -6,6 +6,7 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { AboutComponent } from './components/about/about.component';
 import { TestComponent } from './components/test/test.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { DynamicFormPageComponent } from './components/dynamic-form-page/dynamic-form-page.component';
 
 
 const routes: Routes = [{
@@ -21,7 +22,12 @@ const routes: Routes = [{
   , {
   path: 'two-way',
   component: TwoWayBindingComponent
-}];
+}
+  , {
+  path: 'dynamic-form',
+  component: DynamicFormPageComponent
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

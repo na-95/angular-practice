@@ -8,20 +8,20 @@ import { TestServiceService } from 'src/app/services/test-service.service';
 })
 export class ChildOneComponent implements OnInit, OnChanges {
 
-  @Input() leMessage: string = 'Bitch';
+  @Input() leMessage: string = 'B****';
 
   constructor(private testService: TestServiceService) {
-    console.log(this.leMessage, 'constructor')
+    console.log(this.leMessage, 'inside constructor')
 
-  }
-
-  ngOnInit(): void {
-    console.log(this.leMessage, 'init')
   }
 
   ngOnChanges(changes: SimpleChanges) {
     // ngOnChanges is called before ngOnInit to ensure that the later function has access to the data bounded to the input props when it is called. if the initialized value (Bitch in this case) is required, use constructor.
-    console.log(changes.leMessage, 'onChanges')
+    console.log(changes.leMessage, 'inside onChanges')
+  }
+
+  ngOnInit(): void {
+    console.log(this.leMessage, 'inside onInit')
   }
 
   onSubmit = (e) => {
