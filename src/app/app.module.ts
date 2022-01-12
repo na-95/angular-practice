@@ -19,6 +19,7 @@ import { DynamicFormControlComponent } from './dynamic-form-components/dynamic-f
 import { DynamicFormComponent } from './dynamic-form-components/dynamic-form/dynamic-form.component';
 import { FluidTabsComponent } from './components/fluid-tabs/fluid-tabs.component';
 import { NotionComponent } from './components/notion/notion.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { NotionComponent } from './components/notion/notion.component';
     DynamicFormComponent,
     FluidTabsComponent,
     NotionComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
