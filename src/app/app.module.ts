@@ -14,6 +14,8 @@ import { ChildOneComponent } from './components/child-one/child-one.component';
 import { ChildTwoComponent } from './components/child-two/child-two.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { TwoWayBindingChildComponent } from './components/two-way-binding-child/two-way-binding-child.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import { TwoWayBindingChildComponent } from './components/two-way-binding-child/
     ChildTwoComponent,
     TwoWayBindingComponent,
     TwoWayBindingChildComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

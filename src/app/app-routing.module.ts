@@ -6,6 +6,7 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { AboutComponent } from './components/about/about.component';
 import { TestComponent } from './components/test/test.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 
 const routes: Routes = [{
@@ -21,6 +22,10 @@ const routes: Routes = [{
   , {
   path: 'two-way',
   component: TwoWayBindingComponent
+}
+  , {
+  path: 'reactive-form',
+  component: ReactiveFormComponent
 }];
 
 @NgModule({
