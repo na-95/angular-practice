@@ -7,6 +7,8 @@ import { AboutComponent } from './components/about/about.component';
 import { TestComponent } from './components/test/test.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { DynamicFormPageComponent } from './components/dynamic-form-page/dynamic-form-page.component';
+import { FluidTabsComponent } from './components/fluid-tabs/fluid-tabs.component';
+import { NotionComponent } from './components/notion/notion.component';
 
 
 const routes: Routes = [{
@@ -26,6 +28,14 @@ const routes: Routes = [{
   , {
   path: 'dynamic-form',
   component: DynamicFormPageComponent
+}
+  , {
+  path: 'fluid-tabs',
+  component: FluidTabsComponent
+}
+  , {
+  path: 'notion',
+  component: NotionComponent
 }
 ];
 

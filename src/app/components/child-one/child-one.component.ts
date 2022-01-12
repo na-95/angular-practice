@@ -9,6 +9,7 @@ import { TestServiceService } from 'src/app/services/test-service.service';
 export class ChildOneComponent implements OnInit, OnChanges {
 
   @Input() leMessage: string = 'B****';
+  @Input() alMessage: string;
 
   constructor(private testService: TestServiceService) {
     console.log(this.leMessage, 'inside constructor')

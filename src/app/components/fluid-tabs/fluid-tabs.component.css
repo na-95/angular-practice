@@ -1,0 +1,63 @@
+.al-container{
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  position: relative;
+  display: flex;
+  list-style-type: none;
+  background-color: #C7C7A6;
+  /* background-color: #b7d1cf; */
+  padding: 0.5rem 0rem;
+  border-radius: 15px;
+  width: 60%;
+  height: 3rem;
+}
+
+li{
+  padding: 0.5rem 0.5rem;
+  margin: 0 0.5rem;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+li.active{
+  color: white;
+
+}
+
+.tab{
+  border: 4px solid #A49966;
+  /* border: 1px solid rgb(145, 138, 138); */
+  top: -5%;
+  position: absolute;
+  border-radius: 10px;
+  width: 25%;
+  height: 110%;
+  transition: all 0.5s ease-in-out;
+  background-color: #363020;
+  /* background-color: rgba(153, 205, 50, 0.774); */
+  z-index: 1;
+}
+
+li.a.active ~ .tab{
+  left: 0%
+}
+li.b.active ~ .tab{
+  left: 25%
+}
+li.c.active ~ .tab{
+  left: 50%
+}
+li.d.active ~ .tab{
+  left: 75%
+}
+
