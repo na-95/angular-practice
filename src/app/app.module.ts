@@ -17,6 +17,8 @@ import { TwoWayBindingChildComponent } from './components/two-way-binding-child/
 import { DynamicFormPageComponent } from './components/dynamic-form-page/dynamic-form-page.component';
 import { DynamicFormControlComponent } from './dynamic-form-components/dynamic-form-control/dynamic-form-control.component';
 import { DynamicFormComponent } from './dynamic-form-components/dynamic-form/dynamic-form.component';
+import { NgContentParentComponent } from './components/ng-content-parent/ng-content-parent.component';
+import { NgContentChildComponent } from './components/ng-content-child/ng-content-child.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { DynamicFormComponent } from './dynamic-form-components/dynamic-form/dyn
     DynamicFormPageComponent,
     DynamicFormControlComponent,
     DynamicFormComponent,
+    NgContentParentComponent,
+    NgContentChildComponent,
   ],
   imports: [
     BrowserModule,

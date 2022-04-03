@@ -7,6 +7,7 @@ import { AboutComponent } from './components/about/about.component';
 import { TestComponent } from './components/test/test.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { DynamicFormPageComponent } from './components/dynamic-form-page/dynamic-form-page.component';
+import { NgContentParentComponent } from './components/ng-content-parent/ng-content-parent.component';
 
 
 const routes: Routes = [{
@@ -26,6 +27,10 @@ const routes: Routes = [{
   , {
   path: 'dynamic-form',
   component: DynamicFormPageComponent
+}
+  , {
+  path: 'ng-content',
+  component: NgContentParentComponent
 }
 ];
 
