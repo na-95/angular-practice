@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   showChildTwo: boolean = false;
-  leMessage: Array<string> = ['Nouraiz']
+  leMessage: Array<string> = ['Nouraiz'];
+  alMessage: 'uncleeeee'
 
   constructor() { }
 

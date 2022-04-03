@@ -1,0 +1,23 @@
+<h1>reactive-form works!</h1>
+
+<form [formGroup]="form">
+    <label>Name:</label>
+    <input type="text" class="form-control" formControlName="name" />
+
+    <!-- <label>Age:</label>
+    <input type="number" class="form-control" formControlName="age" /> -->
+
+    <!-- OR, INSTEAD OF USING FORM ARRAY, SIMPLY USE A FORM CONTROL, WITH INITIAL VALUE OF EMPTY ARRAY AND PROGRAMATICALLY ADD/REMOVE VALUES TO IT: -->
+    <div>
+        <ul>
+            <li *ngFor="let item of form.controls.age.value; let i = index">
+                {{item}} <u class="ml-4 text-danger" role="button" (click)="removeItem(i)">remove</u>
+            </li>
+        </ul>
+    </div>
+
+    <input type="text" [(ngModel)]="tempValue" [ngModelOptions]="{standalone: true}" />
+    <button (click)="addItem()">add</button>
+    <!-- <button (click)="removeItem()">remove</button> -->
+
+</form>
