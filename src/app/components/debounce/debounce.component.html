@@ -1,0 +1,13 @@
+<div class="py-2">
+    <span>Search: </span>
+    <input type="text" [(ngModel)]="q" (ngModelChange)="debounce()"/>
+</div>
+<div class="py-2">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of response">
+            <div><b>Name: </b>{{item.name}}</div>
+            <div><b>Type: </b>{{item.type}}</div>
+            <div><b>Description: </b>{{item.description ? item.description : '-'}}</div>
+        </li>
+    </ul>
+</div>

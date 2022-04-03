@@ -22,6 +22,7 @@ import { NgContentChildComponent } from './components/ng-content-child/ng-conten
 import { FluidTabsComponent } from './components/fluid-tabs/fluid-tabs.component';
 import { NotionComponent } from './components/notion/notion.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { DebounceComponent } from './components/debounce/debounce.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
     FluidTabsComponent,
     NotionComponent,
     ReactiveFormComponent,
+    DebounceComponent,
   ],
   imports: [
     BrowserModule,

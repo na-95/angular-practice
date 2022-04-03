@@ -11,42 +11,50 @@ import { NgContentParentComponent } from './components/ng-content-parent/ng-cont
 import { FluidTabsComponent } from './components/fluid-tabs/fluid-tabs.component';
 import { NotionComponent } from './components/notion/notion.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { DebounceComponent } from './components/debounce/debounce.component';
 
 
 const routes: Routes = [{
-  path: '',
-  component: TodosComponent
-}, {
-  path: 'about',
-  component: AboutComponent
-}, {
-  path: 'test',
-  component: TestComponent
-}
-  , {
-  path: 'two-way',
-  component: TwoWayBindingComponent
-}
-  , {
-  path: 'dynamic-form',
-  component: DynamicFormPageComponent
-}
-  , {
-  path: 'ng-content',
-  component: NgContentParentComponent
-},
-{
-  path: 'fluid-tabs',
-  component: FluidTabsComponent
-}
-  , {
-  path: 'notion',
-  component: NotionComponent
-}
-  , {
-  path: 'reactive-form',
-  component: ReactiveFormComponent
-}];
+    path: '',
+    component: TodosComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+  {
+    path: 'test',
+    component: TestComponent
+  },
+  {
+    path: 'two-way',
+    component: TwoWayBindingComponent
+  },
+  {
+    path: 'dynamic-form',
+    component: DynamicFormPageComponent
+  },
+  {
+    path: 'ng-content',
+    component: NgContentParentComponent
+  },
+  {
+    path: 'fluid-tabs',
+    component: FluidTabsComponent
+  },
+  {
+    path: 'notion',
+    component: NotionComponent
+  },
+  {
+    path: 'reactive-form',
+    component: ReactiveFormComponent
+  },
+  {
+    path: 'debounce',
+    component: DebounceComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
