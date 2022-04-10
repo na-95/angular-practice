@@ -32,7 +32,6 @@ export class ControlsService {
           placeholder: 'First Name',
           label: 'First name',
           value: 'Bombasto',
-          required: true,
           order: 1,
           controlType: 'textbox'
         }
@@ -57,6 +56,7 @@ export class ControlsService {
             { key: 'unproven', value: 'Unproven' }
           ],
           value: 'unproven',
+          validations: { required: false },
           order: 3,
           controlType: 'dropdown'
         }
@@ -68,7 +68,7 @@ export class ControlsService {
           placeholder: 'First Name',
           label: 'First name',
           value: 'Nouraiz',
-          required: true,
+          validations: { required: true, minLength: 5 },
           order: 1,
           controlType: 'textbox'
         }
@@ -79,8 +79,8 @@ export class ControlsService {
           key: 'secondName',
           placeholder: 'Second Name',
           label: 'Second name',
-          value: 'Bombasto',
-          required: true,
+          value: 'Sam',
+          validations: { required: true, maxLength: 4 },
           order: 1,
           controlType: 'textbox'
         }
@@ -92,9 +92,8 @@ export class ControlsService {
           placeholder: 'Email',
           label: 'Email',
           value: 'nouraiz.asad@eonhealth.com',
-          disabled: true,
-          type: 'email',
-          required: true,
+          type: 'textbox',
+          validations: { email: true, required: true },
           order: 2,
           controlType: 'textbox'
         }

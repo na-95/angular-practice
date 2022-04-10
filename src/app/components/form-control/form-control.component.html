@@ -30,7 +30,10 @@
                 {{control.label}} is required.
             </div>
             <div *ngIf="controlErrors && controlErrors['minlength']">
-                {{control.label}} must be at least 4 characters long.
+                {{control.label}} must be at least {{control.validations.minLength}} characters long.
+            </div>
+            <div *ngIf="controlErrors && controlErrors['maxlength']">
+                {{control.label}} must be less than {{control.validations.maxLength}} characters long.
             </div>
             <div *ngIf="controlErrors && controlErrors['email']">
                 {{control.label}} must be a valid email.

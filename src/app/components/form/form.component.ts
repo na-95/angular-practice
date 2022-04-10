@@ -33,15 +33,22 @@ export class FormComponent implements OnChanges {
   }
 
   getValidators(control: FormControlBase<any>): ValidatorFn[] {
-    const validators = [];
-    
-    if(control.required)
-      validators.push(Validators.required);
+    const validatorsFn = [];
+    const { validations } = control;
 
-    if(control.type === 'email')
-      validators.push(Validators.email);
+    if(validations.required)
+      validatorsFn.push(Validators.required);
 
-    return validators as ValidatorFn[];
+    if(validations.email)
+      validatorsFn.push(Validators.email);
+
+    if(validations.minLength)
+      validatorsFn.push(Validators.minLength(validations.minLength));
+
+    if(validations.maxLength)
+      validatorsFn.push(Validators.maxLength(validations.maxLength));
+
+    return validatorsFn as ValidatorFn[];
   }
 
   emitFormValue() {
@@ -55,6 +62,7 @@ export class FormComponent implements OnChanges {
         disabledControls[control] = this.form.controls[control].value;
     }
 
+    // clear form, except for disabled controls
     this.form.reset(disabledControls)
   }
 }
