@@ -1,9 +1,7 @@
 <div>
     <form (ngSubmit)="emitFormValue()" [formGroup]="form">
 
-        <div *ngFor="let control of controls">
-            <app-form-control [control]="control" [form]="form"></app-form-control>
-        </div>
+        <app-form-control *ngFor="let control of controls" [control]="control" [form]="form"></app-form-control>
 
         <button class="mt-1 btn btn-lg btn-primary" type="submit" [disabled]="!form.valid">Save</button>
 
