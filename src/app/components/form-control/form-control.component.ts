@@ -12,5 +12,5 @@ export class FormControlComponent {
   @Input() control: any;
   get isValid() { return this.form.controls[this.control.key].valid; }
   get isTouched() { return this.form.controls[this.control.key].touched; }
-  get controlErrors() { return this.form.controls[this.control.key].errors; }
+  get errors() { return this.form.controls[this.control.key].errors; }
 }

@@ -12,12 +12,14 @@
                 [placeholder]="control.placeholder"
                 [formControlName]="control.key"
                 class="form-control"
+                [ngClass]="isTouched && !isValid ? 'border border-danger' : ''"
                 [type]="control.type">
     
             <select
                 *ngSwitchCase="'dropdown'"
                 [id]="control.key"
                 class="form-control"
+                [ngClass]="isTouched && !isValid ? 'border border-danger' : ''"
                 [formControlName]="control.key">
                 <option [ngValue]="null">Select Option</option>
                 <option *ngFor="let opt of control.options" [value]="opt.key">{{opt.value}}</option>
@@ -26,16 +28,16 @@
     
         <!-- error messages -->
         <small class="text-danger" *ngIf="isTouched && !isValid">
-            <div *ngIf="controlErrors && controlErrors['required']">
+            <div *ngIf="errors && errors['required']">
                 {{control.label}} is required.
             </div>
-            <div *ngIf="controlErrors && controlErrors['minlength']">
+            <div *ngIf="errors && errors['minlength']">
                 {{control.label}} must be at least {{control.validations.minLength}} characters long.
             </div>
-            <div *ngIf="controlErrors && controlErrors['maxlength']">
+            <div *ngIf="errors && errors['maxlength']">
                 {{control.label}} must be less than {{control.validations.maxLength}} characters long.
             </div>
-            <div *ngIf="controlErrors && controlErrors['email']">
+            <div *ngIf="errors && errors['email']">
                 {{control.label}} must be a valid email.
             </div>
         </small>
