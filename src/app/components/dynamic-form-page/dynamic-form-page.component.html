@@ -1,4 +1,8 @@
 <div>
-    <h1>------- Le Dynamic Form -------</h1>
-    <app-dynamic-form [controls]="controls$ | async"></app-dynamic-form>
+    <app-form
+        [controls]="controls"
+        (formValueEmitter)="onSubmit($event)">
+    </app-form>
+    
+    <div *ngIf="emittedFormValue"><pre>{{emittedFormValue | json}}</pre></div>
 </div>

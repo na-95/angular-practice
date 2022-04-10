@@ -1,0 +1,16 @@
+<div>
+    <form (ngSubmit)="emitFormValue()" [formGroup]="form">
+
+        <div *ngFor="let control of controls" class="form-row">
+            <app-form-control [control]="control" [form]="form"></app-form-control>
+        </div>
+
+        <br />
+
+        <!-- submit button -->
+        <div class="form-row">
+            <button type="submit" [disabled]="!form.valid">Save</button>
+        </div>
+    </form>
+
+</div>

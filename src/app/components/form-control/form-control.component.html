@@ -1,0 +1,22 @@
+<ng-container [formGroup]="form">
+    <div [ngSwitch]="control.controlType">
+    
+        <!-- label -->
+        <label [attr.for]="control.key">{{control.label}}:</label>
+    
+        <!-- control - switchcases -->
+        <div>
+            <input *ngSwitchCase="'textbox'" [id]="control.key" [placeholder]="control.placeholder" [formControlName]="control.key" [type]="control.type">
+    
+            <select *ngSwitchCase="'dropdown'" [id]="control.key" [formControlName]="control.key">
+                <option *ngFor="let opt of control.options" [value]="opt.key">{{opt.value}}</option>
+            </select>
+        </div>
+    
+        <!-- error message -->
+        <div class="errorMessage" *ngIf="form.controls[control.key].touched && !form.controls[control.key].valid">
+            {{control.label}} is required
+        </div>
+    
+    </div>
+</ng-container>

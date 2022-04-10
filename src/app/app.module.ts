@@ -15,14 +15,14 @@ import { ChildTwoComponent } from './components/child-two/child-two.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { TwoWayBindingChildComponent } from './components/two-way-binding-child/two-way-binding-child.component';
 import { DynamicFormPageComponent } from './components/dynamic-form-page/dynamic-form-page.component';
-import { DynamicFormControlComponent } from './dynamic-form-components/dynamic-form-control/dynamic-form-control.component';
-import { DynamicFormComponent } from './dynamic-form-components/dynamic-form/dynamic-form.component';
+import { FormControlComponent } from './components/form-control/form-control.component';
 import { NgContentParentComponent } from './components/ng-content-parent/ng-content-parent.component';
 import { NgContentChildComponent } from './components/ng-content-child/ng-content-child.component';
 import { FluidTabsComponent } from './components/fluid-tabs/fluid-tabs.component';
 import { NotionComponent } from './components/notion/notion.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { DebounceComponent } from './components/debounce/debounce.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -38,14 +38,14 @@ import { DebounceComponent } from './components/debounce/debounce.component';
     TwoWayBindingComponent,
     TwoWayBindingChildComponent,
     DynamicFormPageComponent,
-    DynamicFormControlComponent,
-    DynamicFormComponent,
+    FormControlComponent,
     NgContentParentComponent,
     NgContentChildComponent,
     FluidTabsComponent,
     NotionComponent,
     ReactiveFormComponent,
     DebounceComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

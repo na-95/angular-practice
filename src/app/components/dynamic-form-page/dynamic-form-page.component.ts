@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { FormControlBase } from 'src/app/dynamic-form-helpers/FormControlBase';
+import { Component } from '@angular/core';
 import { ControlsService } from 'src/app/services/controls.service';
 
 @Component({
@@ -8,15 +6,21 @@ import { ControlsService } from 'src/app/services/controls.service';
   templateUrl: './dynamic-form-page.component.html',
   styleUrls: ['./dynamic-form-page.component.css']
 })
-export class DynamicFormPageComponent implements OnInit {
+export class DynamicFormPageComponent {
 
-  controls$: Observable<FormControlBase<any>[]>;
+  controls: any[] = [];
+  emittedFormValue: {};
 
-  constructor(private cs: ControlsService) {
-    this.controls$ = cs.getControls();
+  constructor(controlsService: ControlsService) {
+    this.controls = controlsService.getNewControls();
+
+    // setTimeout(() => {
+    //   this.controls = controlsService.getNewControls();
+    // }, 3000);
   }
 
-  ngOnInit(): void {
+  onSubmit(formValue: {}): void {
+    this.emittedFormValue = formValue;
   }
 
 }
