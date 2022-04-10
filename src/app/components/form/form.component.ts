@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { FormControlBase } from 'src/app/form-control-classes/FormControlBase';
 
 @Component({
   selector: 'app-form',
@@ -13,23 +14,47 @@ export class FormComponent implements OnChanges {
   @Output() formValueEmitter = new EventEmitter<any>();
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes.controls){
-      changes.controls.currentValue.forEach(control => {
+    const { controls } = changes;
+
+    if(controls){
+      const { currentValue, previousValue, firstChange} = controls;
+      currentValue.forEach((control: FormControlBase<any>) => {
         this.form.addControl(
           control.key,
           new FormControl({
               value: control.value || control.defaultValue || null,
               disabled: control.disabled,
             },
-            control.required && Validators.required
+            this.getValidators(control)
           )
         )
       });
     }
   }
 
-  emitFormValue() {
-    this.formValueEmitter.emit(this.form.value);
+  getValidators(control: FormControlBase<any>): ValidatorFn[] {
+    const validators = [];
+    
+    if(control.required)
+      validators.push(Validators.required);
+
+    if(control.type === 'email')
+      validators.push(Validators.email);
+
+    return validators as ValidatorFn[];
   }
 
+  emitFormValue() {
+    this.formValueEmitter.emit(this.form.getRawValue());
+  }
+
+  resetForm(): void {
+    const disabledControls = {};
+    for(let control in this.form.controls){
+      if (this.form.controls[control].status.toLowerCase() === 'disabled')
+        disabledControls[control] = this.form.controls[control].value;
+    }
+
+    this.form.reset(disabledControls)
+  }
 }

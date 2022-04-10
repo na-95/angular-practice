@@ -9,18 +9,16 @@ import { ControlsService } from 'src/app/services/controls.service';
 export class DynamicFormPageComponent {
 
   controls: any[] = [];
-  emittedFormValue: {};
+  emittedFormValue: {} = null;
 
   constructor(controlsService: ControlsService) {
-    this.controls = controlsService.getNewControls();
-
-    // setTimeout(() => {
-    //   this.controls = controlsService.getNewControls();
-    // }, 3000);
+    this.controls = controlsService.getUpdatedControls();
+    // setTimeout(() => this.controls = controlsService.getUpdatedControls(), 3000);
   }
 
   onSubmit(formValue: {}): void {
     this.emittedFormValue = formValue;
+    setTimeout(() => this.emittedFormValue = null, 5000);
   }
 
 }

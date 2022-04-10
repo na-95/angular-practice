@@ -8,10 +8,9 @@ import { FormGroup } from '@angular/forms';
 })
 export class FormControlComponent {
 
-  constructor() { }
-
-  @Input() control: any;
   @Input() form: FormGroup;
+  @Input() control: any;
   get isValid() { return this.form.controls[this.control.key].valid; }
   get isTouched() { return this.form.controls[this.control.key].touched; }
+  get controlErrors() { return this.form.controls[this.control.key].errors; }
 }

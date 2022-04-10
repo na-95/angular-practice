@@ -1,5 +1,7 @@
 export class FormControlBase<T> {
     value: T | undefined;
+    defaultValue?: T | undefined;
+    disabled?: boolean;
     placeholder: string;
     key: string;
     label: string;
@@ -11,6 +13,8 @@ export class FormControlBase<T> {
 
     constructor(options: {
         value?: T;
+        defaultValue?: T,
+        disabled?: boolean,
         placeholder?: string;
         key?: string;
         label?: string;
@@ -21,6 +25,8 @@ export class FormControlBase<T> {
         options?: { key: string, value: string }[];
     } = {}) {
         this.value = options.value;
+        this.defaultValue = options.defaultValue;
+        this.disabled = options.disabled;
         this.placeholder = options.placeholder;
         this.key = options.key || '';
         this.label = options.label || '';
