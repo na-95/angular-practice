@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { DropdownControl } from '../form-control-classes/DropdownControl';
-import { FormControlBase } from '../form-control-classes/FormControlBase';
-import { TextboxControl } from '../form-control-classes/TextboxControl';
+import { DropdownControl } from '../classes/DropdownControl';
+import { FormControlBase } from '../classes/FormControlBase';
+import { TextboxControl } from '../classes/TextboxControl';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
-import { FormControlBase } from 'src/app/form-control-classes/FormControlBase';
+import { FormControlBase } from 'src/app/classes/FormControlBase';
 
 @Component({
   selector: 'app-form',
@@ -17,7 +17,7 @@ export class FormComponent implements OnChanges {
     const { controls } = changes;
 
     if(controls){
-      const { currentValue, previousValue, firstChange} = controls;
+      const { currentValue } = controls;
       currentValue.forEach((control: FormControlBase<any>) => {
         this.form.addControl(
           control.key,

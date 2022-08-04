@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Bitch Lasagna';
   name:string;
+  sidebarClosed: boolean = false;
 
   constructor () {
     this.setName('Nouraiz')

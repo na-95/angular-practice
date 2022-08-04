@@ -17,7 +17,7 @@ export class ChildOneComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    // ngOnChanges is called before ngOnInit to ensure that the later function has access to the data bounded to the input props when it is called. if the initialized value (Bitch in this case) is required, use constructor.
+    // ngOnChanges is called before ngOnInit to ensure that the latter function has access to the data bounded to the input props when it is called. if the initialized value (Bitch in this case) is required, use constructor.
     console.log(changes.leMessage, 'inside onChanges')
   }
 
