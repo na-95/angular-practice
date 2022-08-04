@@ -17,7 +17,9 @@ module.exports = (sequelize: any, DataTypes: any) => {
   Table_1.init({
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    email: DataTypes.STRING
+    email: DataTypes.STRING,
+    jsonColumn: DataTypes.JSON,
+    jsonbColumn: DataTypes.JSONB,
   }, {
     sequelize,
     modelName: 'Table_1',
