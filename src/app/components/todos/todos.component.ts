@@ -10,6 +10,7 @@ import { TodoService } from 'src/app/services/todo.service';
 export class TodosComponent implements OnInit {
 
   todos: Todo[];
+  responseCount: number = 0;
 
   // instance of the service as param:
   constructor(private todoService: TodoService) {
@@ -25,6 +26,9 @@ export class TodosComponent implements OnInit {
       })
 
     // console.log('todos component rendered');
+
+    setTimeout(this.refresh, 5000);
+
   }
 
   deleteTodo = (todo: Todo) => {
@@ -33,6 +37,28 @@ export class TodosComponent implements OnInit {
 
   addTodo = (todo: Todo) => {
     this.todos.push(todo);
+  }
+
+  refresh = () => {
+    // make Ajax call here, inside the callback call:
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => {
+
+        this.responseCount = this.responseCount + 1;
+        // if condition met
+        if (this.responseCount === 3){
+          return;
+        }
+        // return;
+
+        // else
+        setTimeout(this.refresh, 5000);
+        console.log(json);
+      })
+
+    
+    // ...
   }
 
 }

@@ -9,19 +9,19 @@ export class TestComponent implements OnInit {
 
   showChildTwo: boolean = false;
   leMessage: Array<string> = ['Nouraiz'];
-  alMessage: 'uncleeeee'
+  alMessage: any = 'uncleeeee';
 
   constructor() { }
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.showChildTwo = true;
-    // }, 5000)
-
     setTimeout(() => {
-      // this.leMessage.push('asdjkhasjkdh');
-      this.leMessage = [...this.leMessage, "asjdklasjdlkaj"]
-    }, 5000);
+      this.alMessage = 'hanyeaaaaaaaaa';
+    }, 5000)
+
+    // setTimeout(() => {
+    //   // this.leMessage.push('asdjkhasjkdh');
+    //   this.leMessage = [...this.leMessage, "asjdklasjdlkaj"]
+    // }, 5000);
   }
 
 }

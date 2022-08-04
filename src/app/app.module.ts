@@ -23,6 +23,7 @@ import { NotionComponent } from './components/notion/notion.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { DebounceComponent } from './components/debounce/debounce.component';
 import { FormComponent } from './components/form/form.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FormComponent } from './components/form/form.component';
     ReactiveFormComponent,
     DebounceComponent,
     FormComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
