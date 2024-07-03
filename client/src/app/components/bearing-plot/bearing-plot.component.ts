@@ -131,9 +131,6 @@ export class BearingPlotComponent implements OnInit {
   }
 
   renderLine(map: any, startPoint: any, e: any) {
-    console.log(e)
-    console.log(startPoint)
-
     L.polyline([startPoint, [e.latlng.lat, e.latlng.lng]]).addTo(map)
   }
 
