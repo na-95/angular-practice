@@ -24,6 +24,7 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
 import { DebounceComponent } from './components/debounce/debounce.component';
 import { FormComponent } from './components/form/form.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { BearingPlotComponent } from './components/bearing-plot/bearing-plot.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     DebounceComponent,
     FormComponent,
     SidebarComponent,
+    BearingPlotComponent,
   ],
   imports: [
     BrowserModule,

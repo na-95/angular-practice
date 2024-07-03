@@ -12,6 +12,7 @@ import { FluidTabsComponent } from './components/fluid-tabs/fluid-tabs.component
 import { NotionComponent } from './components/notion/notion.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { DebounceComponent } from './components/debounce/debounce.component';
+import { BearingPlotComponent } from './components/bearing-plot/bearing-plot.component';
 
 
 const routes: Routes = [{
@@ -53,6 +54,10 @@ const routes: Routes = [{
   {
     path: 'debounce',
     component: DebounceComponent
+  },
+  {
+    path: 'arkeus',
+    component: BearingPlotComponent
   }
 ];
 
